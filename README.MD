@@ -17,7 +17,7 @@ Structure
 
 Features
 ========
-- Auto refreshes issue data every 2 seconds and list is updated only if changes are found, without page refresh.
+- Auto refreshes issue data every 2 seconds. List is updated only if changes are found without refreshing the page.
 - Therefore "Load the current issues list" link is needed only on initial load.
 
 Issues
