@@ -2,18 +2,18 @@
 =====
 Application for reading Campaign Monitor issues from the status page, and load them dynamically.
 
-Framework - Angular.js (1.4.8)
-Animation - Angular-Animate.js (1.4.8)
-Testing Framework - Jasmine (2.4.1)
-Other Third-Pary NuGet Packages Installed - Moment.js (2.11.1), JQuery (2.2.0)
+- Framework - Angular.js (1.4.8)
+- Animation - Angular-Animate.js (1.4.8)
+- Testing Framework - Jasmine (2.4.1)
+- Other Third-Pary NuGet Packages Installed - Moment.js (2.11.1), JQuery (2.2.0)
 
 Structure
 =========
-Start page - /index.html
-Application files - /app/*.js
-Nuget javascript files - /scripts/*.js
-Provided files from Campaign Monitor - /resources/*
-Unit Tests - /tests/index.html
+- Start page - /index.html
+- Application files - /app/*.js
+- Nuget javascript files - /scripts/*.js
+- Provided files from Campaign Monitor - /resources/*
+- Unit Tests - /tests/index.html
 
 Features
 ========
