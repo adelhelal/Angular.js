@@ -18,7 +18,7 @@ Structure
 Features
 ========
 - Auto refreshes issue data every 2 seconds. List is updated only if changes are found without refreshing the page.
-- Therefore "Load the current issues list" link is needed only on initial load.
+Therefore "Load the current issues list" link is needed only on initial load.
 
 Issues
 ======
@@ -28,4 +28,4 @@ Issues
 Assumptions
 ===========
 - bootstrap.min.css was required and copied into css/ folder
-- Images found in requirements/img folder (glyphicons-halflings.png and glyphicons-halflings-white.png) not needed
+- Images found in requirements/img folder (glyphicons-halflings.png and glyphicons-halflings-white.png) were not needed.
