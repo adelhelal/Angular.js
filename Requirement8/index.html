@@ -1,0 +1,48 @@
+﻿<html ng-app="app">
+<head>
+    <title>CM JS dev, requirement 8</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/main.css" rel="stylesheet" media="screen">
+</head>
+<body>
+    <div class="container" style="padding-top:30px" ng-controller="mainController">
+        <div ng-hide="loaded">
+            <p><a href="#" ng-click="load()">Load the current issues list</a></p>
+        </div>
+        <div class="loading" ng-show="loading"><img src="/img/loader.gif" alt="Loading..."/></div>
+        <div id="results" ng-show="loaded">
+            <!-- Each issue should be rendered with the following template -->
+            <div class="issue-template" ng-repeat="issue in issues track by issue.id">
+                <h3 ng-if="issue.status === 'Unresolved'">{{issue.title}} - Began {{moment(issue.beganAt)}}</h3> <!-- If status === Unresolved -->
+                <h3 ng-if="issue.status === 'Resolved'">{{issue.title}} - Resolved {{moment(issue.resolvedAt)}}</h3> <!-- If status === Resolved -->
+                <p>{{issue.description}}</p>
+                <div style="padding-left:50px">
+                    <p ng-show="issue.updates.length > 0">Updates:</p>
+                    <!-- Each update should be rendered with the following template -->
+                    <div class="update-template" ng-repeat="update in issue.updates track by update.id">
+                        <p>{{update.update}}</p>
+                        <em>By {{update.by}} {{moment(update.at)}}</em>
+                        <hr style="width:50%" />
+                    </div>
+                </div>
+                <hr />
+            </div>
+            <!-- Render this if there are no issues returned -->
+            <div class="no-issues-template" ng-show="empty">
+                Everybody is happy!
+            </div>
+            <div class="no-issues-template" ng-show="error != ''">
+                {{error}}
+            </div>
+            <div class="loading-template" ng-show="loading"></div>
+        </div>
+    </div>
+    <script src="scripts/jquery-2.2.0.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-animate.min.js"></script>
+    <script src="scripts/moment.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/main.controller.js"></script>
+    <script src="app/main.repository.js"></script>
+</body>
+</html>

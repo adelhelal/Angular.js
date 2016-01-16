@@ -1,0 +1,21 @@
+﻿.issue-template {
+  transition: 2s;
+  -webkit-transition: 2s;
+}
+
+.issue-template.ng-enter {
+  opacity: 0;
+}
+
+.issue-template.ng-enter.ng-enter-active {
+  opacity: 1;
+  background-color:#ffffcc;
+}
+
+.issue-template.ng-leave {
+  opacity: 1;
+}
+
+.issue-template.ng-leave.ng-leave-active {
+  opacity: 0;
+}
